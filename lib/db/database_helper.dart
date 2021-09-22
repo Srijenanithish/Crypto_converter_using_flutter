@@ -43,8 +43,8 @@ CREATE TABLE $tableNotes (
 ''');
   }
 
-  Future<Note> create(Note note) async {
-    final db = await instance.database;
+  //Future<Note> create(Note note) async {
+    //final db = await instance.database;
 
     //final json = note.toJson();
     //final columns =
@@ -54,9 +54,9 @@ CREATE TABLE $tableNotes (
     //final id = await db
     // .rawInsert('INSERT INTO table_name ($columns) VALUES ($values)');
 
-    final id = await db.insert(tableNotes, note.toJson());
-    return note.copy(id: id);
-  }
+    //final id = await db.insert(tableNotes, note.toJson());
+    //return note.copy(id: id);
+  //}
 
   Future<Note> readNote(int id) async {
     final db = await instance.database;
